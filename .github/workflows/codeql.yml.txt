@@ -1,0 +1,46 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '30 1 * * 0'
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: windows-latest
+
+    permissions:
+      security-events: write
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ csharp ]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: csharp
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore RestaurantPOS.sln
+
+      - name: Build
+        run: dotnet build RestaurantPOS.sln --configuration Release --no-restore
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
