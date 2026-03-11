@@ -1,0 +1,12 @@
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\bin\Debug\net8.0\RestaurantPOS.Shared.deps.json
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\bin\Debug\net8.0\RestaurantPOS.Shared.dll
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\bin\Debug\net8.0\RestaurantPOS.Shared.pdb
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\RestaurantPOS.Shared.csproj.AssemblyReference.cache
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\RestaurantPOS.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\RestaurantPOS.Shared.AssemblyInfoInputs.cache
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\RestaurantPOS.Shared.AssemblyInfo.cs
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\RestaurantPOS.Shared.csproj.CoreCompileInputs.cache
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\RestaurantPOS.Shared.dll
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\refint\RestaurantPOS.Shared.dll
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\RestaurantPOS.Shared.pdb
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Shared\obj\Debug\net8.0\ref\RestaurantPOS.Shared.dll

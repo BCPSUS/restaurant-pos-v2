@@ -1,0 +1,289 @@
+<Window x:Class="RestaurantPOS.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Restaurant POS v2" Height="720" Width="1200"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="360"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left: Categories -->
+        <Border Grid.Column="0" BorderThickness="1" CornerRadius="6" Padding="10" Margin="0,0,10,0">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="Categories" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                <ListBox x:Name="LstCategories"
+                 DisplayMemberPath="Name"
+                 SelectionChanged="LstCategories_SelectionChanged"/>
+            </DockPanel>
+        </Border>
+
+        <!-- Middle: Menu Items -->
+        <Border Grid.Column="1" BorderThickness="1" CornerRadius="6" Padding="10" Margin="0,0,10,0">
+            <DockPanel>
+                <DockPanel DockPanel.Dock="Top" Margin="0,0,0,10">
+                    <TextBlock Text="Menu Items" FontSize="16" FontWeight="Bold" />
+                    <TextBlock x:Name="TxtSelectedCategory"
+                     Margin="12,3,0,0"
+                     Foreground="Gray"
+                     Text="(select category)"/>
+                </DockPanel>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl x:Name="ItemsMenu">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="4"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button Margin="6" Height="100"
+                Click="MenuItemButton_Click"
+                Tag="{Binding}">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Name2}" Foreground="Gray" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Price, StringFormat=C}" Margin="0,6,0,0"/>
+
+                                        <!-- Station tag -->
+                                        <TextBlock FontSize="11"
+           FontWeight="Bold"
+           Margin="0,4,0,0">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Text" Value="[KITCHEN]"/>
+                                                    <Setter Property="Foreground" Value="Gray"/>
+
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Station}" Value="Sushi">
+                                                            <Setter Property="Text" Value="[SUSHI]"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Station}" Value="Bar">
+                                                            <Setter Property="Text" Value="[BAR]"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </DockPanel>
+        </Border>
+
+        <!-- Right: Order -->
+        <Border Grid.Column="2" BorderThickness="1" CornerRadius="6" Padding="10">
+            <DockPanel>
+
+                <StackPanel DockPanel.Dock="Top">
+                    <TextBlock Text="Order" FontSize="16" FontWeight="Bold" Margin="0,0,0,6"/>
+                    <TextBlock x:Name="TxtOrderHeader" Text="No active order" Foreground="Gray" Margin="0,0,0,10"/>
+
+                    <!-- Order Type / Table -->
+                    <Border BorderThickness="1" CornerRadius="6" Padding="8" Margin="0,0,0,10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="160"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Order Type" Foreground="Gray" />
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="Table #" Foreground="Gray" />
+
+                            <ComboBox x:Name="CboOrderType"
+          Grid.Row="1" Grid.Column="0"
+          Height="28" Margin="0,4,10,0"
+          SelectionChanged="CboOrderType_SelectionChanged">
+                                <ComboBoxItem Content="DineIn" />
+                                <ComboBoxItem Content="Takeout" IsSelected="True"/>
+                                <ComboBoxItem Content="Delivery" />
+                            </ComboBox>
+
+                            <TextBox x:Name="TxtTableNo" Grid.Row="1" Grid.Column="1" Height="28" Margin="0,4,10,0" />
+
+                            <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Margin="0,4,0,0">
+                                <Button x:Name="BtnApplyOrderType" Height="28" Width="70" Margin="0,0,8,0"
+            Content="Apply"
+            Click="BtnApplyOrderType_Click"/>
+                                <Button x:Name="BtnSetTable" Height="28" Width="80"
+            Content="Set Table"
+            Click="BtnSetTable_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+
+                    <!-- Line actions -->
+                    <WrapPanel Margin="0,0,0,10">
+                        <Button x:Name="BtnLinePlus" Width="110" Height="38" Margin="0,0,10,0"
+                    Content="+1"
+                    Click="BtnLinePlus_Click"/>
+                        <Button x:Name="BtnLineMinus" Width="110" Height="38" Margin="0,0,10,0"
+                    Content="-1"
+                    Click="BtnLineMinus_Click"/>
+                        <Button x:Name="BtnLineRemove" Width="110" Height="38"
+                    Content="Remove"
+                    Click="BtnLineRemove_Click"/>
+                    </WrapPanel>
+
+                    <TextBlock x:Name="TxtSelectedLineHint"
+                     Text="(select a line to edit)"
+                     Foreground="Gray"
+                     Margin="0,0,0,8"/>
+                </StackPanel>
+
+                <!-- Order lines -->
+                <ListBox x:Name="LstOrderLines" Height="360" Margin="0,0,0,10"
+                 SelectionChanged="LstOrderLines_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Qty -->
+                                <TextBlock Grid.Column="0" Text="{Binding Qty}" Width="28"/>
+
+                                <!-- Name (strikethrough if voided) -->
+                                <TextBlock Grid.Column="1" Text="{Binding Name}" TextWrapping="Wrap">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="TextDecorations" Value="{x:Null}"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsVoided}" Value="True">
+                                                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
+                                <!-- Total -->
+                                <TextBlock Grid.Column="2" Text="{Binding Total, StringFormat=0.00}" Width="70" TextAlignment="Right" Margin="10,0,0,0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="Black"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsVoided}" Value="True">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
+                                <!-- Status Tag -->
+                                <TextBlock Grid.Column="3" Margin="10,0,0,0" FontSize="11" FontWeight="Bold">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Text" Value=""/>
+                                            <Setter Property="Foreground" Value="Gray"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsVoided}" Value="True">
+                                                    <Setter Property="Text" Value="VOID"/>
+                                                </DataTrigger>
+
+                                                <!-- SENT only if not voided -->
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding IsSentToKitchen}" Value="True"/>
+                                                        <Condition Binding="{Binding IsVoided}" Value="False"/>
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Text" Value="SENT"/>
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                <!-- Station Tag -->
+                                <TextBlock Grid.Column="4"
+           Margin="10,0,0,0"
+           FontSize="11"
+           Foreground="Gray"
+           Text="{Binding Station}"/>
+
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <StackPanel DockPanel.Dock="Bottom">
+                    <Separator Margin="0,6,0,10"/>
+
+                    <Grid Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Subtotal"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" x:Name="TxtSubtotal" Text="0.00"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Tax"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="TxtTax" Text="0.00"/>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Total" FontWeight="Bold" FontSize="15"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" x:Name="TxtTotal" Text="0.00" FontWeight="Bold" FontSize="15"/>
+                    </Grid>
+
+                    <!-- Buttons -->
+                    <WrapPanel>
+                        <Button x:Name="BtnNewOrder" Width="160" Height="44" Margin="0,0,10,10"
+                    Content="New Order"
+                    Click="BtnNewOrder_Click"/>
+
+                        <Button x:Name="BtnOpenOrder" Width="160" Height="44" Margin="0,0,0,10"
+                    Content="Open Order"
+                    Click="BtnOpenOrder_Click"/>
+
+                        <Button x:Name="BtnSendKitchen" Width="160" Height="44" Margin="0,0,10,0"
+                    Content="Send Kitchen (Fake)"
+                    Click="BtnSendKitchen_Click"/>
+
+                        <Button x:Name="BtnPrintReceipt" Width="160" Height="44" Margin="0,0,0,0"
+                    Content="Print Receipt (Fake)"
+                    Click="BtnPrintReceipt_Click"/>
+
+                        <Button x:Name="BtnClearOrder" Width="160" Height="44" Margin="0,10,10,0"
+                    Content="Clear Order (Local)"
+                    Click="BtnClearOrder_Click"/>
+                        <Button x:Name="BtnBackOffice"
+        Content="Back Office"
+        Width="120"
+        Height="36"
+        Margin="10"
+        Click="BtnBackOffice_Click"/>
+                    </WrapPanel>
+
+                    <TextBlock Text="Output: logs\print_kitchen.txt, logs\print_receipt.txt"
+                     Foreground="Gray" Margin="0,10,0,0" TextWrapping="Wrap"/>
+                </StackPanel>
+
+            </DockPanel>
+        </Border>
+
+    </Grid>
+</Window>

@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantPOS.Application\RestaurantPOS.Application.csproj" />
+    <ProjectReference Include="..\RestaurantPOS.Domain\RestaurantPOS.Domain.csproj" />
+    <ProjectReference Include="..\RestaurantPOS.Infrastructure\RestaurantPOS.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

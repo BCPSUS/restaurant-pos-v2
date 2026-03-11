@@ -1,0 +1,17 @@
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\bin\Debug\net8.0\RestaurantPOS.Application.deps.json
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\bin\Debug\net8.0\RestaurantPOS.Application.dll
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\bin\Debug\net8.0\RestaurantPOS.Application.pdb
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\bin\Debug\net8.0\RestaurantPOS.Domain.dll
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\bin\Debug\net8.0\RestaurantPOS.Shared.dll
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\bin\Debug\net8.0\RestaurantPOS.Domain.pdb
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\bin\Debug\net8.0\RestaurantPOS.Shared.pdb
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\RestaurantPOS.Application.csproj.AssemblyReference.cache
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\RestaurantPOS.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\RestaurantPOS.Application.AssemblyInfoInputs.cache
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\RestaurantPOS.Application.AssemblyInfo.cs
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\RestaurantPOS.Application.csproj.CoreCompileInputs.cache
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\Restaura.C205DECE.Up2Date
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\RestaurantPOS.Application.dll
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\refint\RestaurantPOS.Application.dll
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\RestaurantPOS.Application.pdb
+D:\RestaurantPOS\RestaurantPOS_v2_VS_Template\src\RestaurantPOS.Application\obj\Debug\net8.0\ref\RestaurantPOS.Application.dll

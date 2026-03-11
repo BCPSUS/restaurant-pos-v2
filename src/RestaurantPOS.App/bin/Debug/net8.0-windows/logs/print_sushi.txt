@@ -1,0 +1,76 @@
+=== SUSHI ADD TICKET ===
+DEBUG-STATION: Sushi
+Order:   (Id:21)
+Type : Takeout
+Time : 2026-03-06 01:38:28
+Batch: 2026-03-06 06:38:28 UTC
+--------------------------------
++  1  California Roll
+--------------------------------
+
+=== SUSHI ADD TICKET ===
+Order:   (Id:22)
+Type : Takeout
+Time : 2026-03-06 01:43:38
+Batch: 2026-03-06 06:43:38 UTC
+--------------------------------
++  1  Salmon Nigiri
+--------------------------------
+
+=== SUSHI ADD TICKET ===
+Order:   (Id:23)
+Type : Takeout
+Time : 2026-03-06 01:46:25
+Batch: 2026-03-06 06:46:25 UTC
+--------------------------------
++  1  Salmon Nigiri
+--------------------------------
+
+=== SUSHI ADD TICKET ===
+Order:   (Id:23)
+Type : Takeout
+Time : 2026-03-06 01:46:40
+Batch: 2026-03-06 06:46:40 UTC
+--------------------------------
++  1  California Roll
+--------------------------------
+
+=== SUSHI VOID TICKET ===
+Order:   (Id:23)
+Type : Takeout
+Time : 2026-03-06 01:46:40
+Batch: 2026-03-06 06:46:40 UTC
+--------------------------------
+-  1  Salmon Nigiri
+--------------------------------
+
+=== SUSHI ADD TICKET ===
+Order:   (Id:27)
+Type : Takeout
+Time : 2026-03-06 01:56:12
+Batch: 2026-03-06 06:56:12 UTC
+--------------------------------
++  1  Salmon Nigiri
++  1  California Roll
+--------------------------------
+
+=== SUSHI VOID TICKET ===
+Order:   (Id:27)
+Type : Takeout
+Time : 2026-03-06 01:56:29
+Batch: 2026-03-06 06:56:29 UTC
+--------------------------------
+-  1  Salmon Nigiri
+--------------------------------
+
+=== SUSHI ADD TICKET ===
+Order:   (Id:33)
+Type : Takeout
+Table: 4
+Time : 2026-03-06 16:10:48
+Batch: 2026-03-06 21:10:48 UTC
+--------------------------------
++  1  California Roll
++  1  Salmon Sashimi
+--------------------------------
+

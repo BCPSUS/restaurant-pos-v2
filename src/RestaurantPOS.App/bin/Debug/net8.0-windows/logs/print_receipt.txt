@@ -1,0 +1,40 @@
+﻿=== RECEIPT ===
+OrderId: 4
+OrderNo: 260303-212719
+Type: Takeout
+----------------------
+1 x Test Item    12.99
+1 x Test Item    12.99
+1 x Test Item    12.99
+----------------------
+Subtotal: 38.97
+Tax:      2.73
+Total:    41.70
+======================
+=== RECEIPT ===
+Order: 260303-225802  (Id:17)
+Time : 2026-03-03 22:58:10
+----------------------------
+1  Chicken Teriyaki   12.99
+1  Tonkotsu Ramen   13.99
+1  Coke   2.50
+1  Green Tea   2.00
+----------------------------
+Subtotal: 31.48
+Tax     : 2.20
+Total   : 33.68
+
+=== RECEIPT ===
+Order:   (Id:14)
+Type : Takeout
+Time : 2026-03-05 23:50:29
+----------------------------
+   1 California Roll         8.99
+   1 Salmon Nigiri           6.50
+   1 Chicken Teriyaki       12.99
+   1 Tonkotsu Ramen         13.99
+--------------------------------
+  Subtotal                 42.47
+   Tax                      2.97
+  Total                    45.44
+

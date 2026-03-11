@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantPOS.Application\RestaurantPOS.Application.csproj" />
+    <ProjectReference Include="..\RestaurantPOS.Domain\RestaurantPOS.Domain.csproj" />
+    <ProjectReference Include="..\RestaurantPOS.Infrastructure\RestaurantPOS.Infrastructure.csproj" />
+    <ProjectReference Include="..\RestaurantPOS.Hardware\RestaurantPOS.Hardware.csproj" />
+    <ProjectReference Include="..\RestaurantPOS.Shared\RestaurantPOS.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+  </ItemGroup>
+</Project>

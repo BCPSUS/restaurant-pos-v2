@@ -1,0 +1,216 @@
+﻿=== KITCHEN TICKET ===
+OrderId: 14
+OrderNo: 260303-223105
+Type: Takeout   Status: SentToKitchen
+Created: 2026-03-04 03:31:05
+----------------------
+1  California Roll
+1  Salmon Nigiri
+2  Chicken Teriyaki
+1  Tonkotsu Ramen
+1  Salmon Nigiri
+1  Salmon Nigiri
+1  California Roll
+----------------------
+=== KITCHEN TICKET ===
+Order: 260303-223526  (Id:15)
+Time : 2026-03-03 22:35:28
+----------------------------
+1  Chicken Teriyaki
+1  Tonkotsu Ramen
+----------------------------
+
+=== KITCHEN TICKET ===
+Order: 260303-223526  (Id:15)
+Time : 2026-03-03 22:35:42
+----------------------------
+1  Coke
+1  Green Tea
+1  Chicken Teriyaki
+1  Tonkotsu Ramen
+----------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order: 260303-224630  (Id:16)
+Time : 2026-03-03 22:46:36
+Batch: 2026-03-04 03:46:36 UTC
+--------------------------------
+[ADD]
++ 1  California Roll
++ 1  Salmon Nigiri
++ 1  Coke
++ 1  Green Tea
+
+--------------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order: 260303-224630  (Id:16)
+Time : 2026-03-03 22:47:12
+Batch: 2026-03-04 03:47:12 UTC
+--------------------------------
+[ADD]
++ 1  Tonkotsu Ramen
+
+[VOID]
+- 1  California Roll
+
+--------------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order: 260303-225802  (Id:17)
+Time : 2026-03-03 22:58:06
+Batch: 2026-03-04 03:58:06 UTC
+--------------------------------
+[ADD]
++ 1  Chicken Teriyaki
++ 1  Tonkotsu Ramen
++ 1  Coke
++ 1  Green Tea
+
+--------------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order: 260303-225802  (Id:17)
+Time : 2026-03-03 22:58:37
+Batch: 2026-03-04 03:58:37 UTC
+--------------------------------
+[ADD]
++ 1  California Roll
+
+[VOID]
+- 1  Tonkotsu Ramen
+
+--------------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order:   (Id:3)
+Time : 2026-03-04 02:02:39
+Batch: 2026-03-04 07:02:39 UTC
+--------------------------------
+[ADD]
++ 1  California Roll
++ 1  Salmon Nigiri
+
+--------------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order:   (Id:4)
+Time : 2026-03-04 02:05:14
+Batch: 2026-03-04 07:05:14 UTC
+--------------------------------
+[ADD]
++ 1  California Roll
++ 1  Salmon Nigiri
+
+--------------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order:   (Id:7)
+Time : 2026-03-04 02:06:22
+Batch: 2026-03-04 07:06:21 UTC
+--------------------------------
+[ADD]
++ 1  California Roll
++ 1  Salmon Nigiri
+
+--------------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order:   (Id:8)
+Type : Takeout
+Time : 2026-03-04 02:19:16
+Batch: 2026-03-04 07:19:16 UTC
+--------------------------------
+[ADD]
++ 1  Salmon Nigiri
+
+--------------------------------
+
+=== KITCHEN SYNC TICKET ===
+Order:   (Id:9)
+Type : Takeout
+Time : 2026-03-04 02:25:25
+Batch: 2026-03-04 07:25:25 UTC
+--------------------------------
+[ADD]
++  1  Chicken Teriyaki
++  1  Tonkotsu Ramen
++  1  Coke
++  1  Green Tea
++  1  California Roll
++  1  Salmon Nigiri
+
+--------------------------------
+
+=== KITCHEN ADD TICKET ===
+Order:   (Id:10)
+Type : Takeout
+Time : 2026-03-04 02:38:00
+Batch: 2026-03-04 07:38:00 UTC
+--------------------------------
++  1  Salmon Nigiri
++  1  California Roll
+--------------------------------
+
+=== KITCHEN ADD TICKET ===
+Order:   (Id:14)
+Type : Takeout
+Time : 2026-03-05 23:50:16
+Batch: 2026-03-06 04:50:16 UTC
+--------------------------------
++  1  California Roll
++  1  Salmon Nigiri
+--------------------------------
+
+=== KITCHEN ADD TICKET ===
+Order:   (Id:14)
+Type : Takeout
+Time : 2026-03-05 23:50:31
+Batch: 2026-03-06 04:50:31 UTC
+--------------------------------
++  1  Chicken Teriyaki
++  1  Tonkotsu Ramen
+--------------------------------
+
+=== KITCHEN ADD TICKET ===
+Order:   (Id:18)
+Type : Takeout
+Time : 2026-03-06 01:24:46
+Batch: 2026-03-06 06:24:46 UTC
+--------------------------------
++  1  California Roll
++  1  Tonkotsu Ramen
++  1  Coke
+--------------------------------
+
+=== KITCHEN ADD TICKET ===
+DEBUG-STATION: Kitchen
+Order:   (Id:19)
+Type : Takeout
+Time : 2026-03-06 01:29:59
+Batch: 2026-03-06 06:29:59 UTC
+--------------------------------
++  1  California Roll
++  1  Chicken Teriyaki
++  1  Coke
+--------------------------------
+
+=== KITCHEN ADD TICKET ===
+DEBUG-STATION: Kitchen
+Order:   (Id:21)
+Type : Takeout
+Time : 2026-03-06 01:38:28
+Batch: 2026-03-06 06:38:28 UTC
+--------------------------------
++  1  Chicken Teriyaki
+--------------------------------
+
+=== KITCHEN ADD TICKET ===
+Order:   (Id:22)
+Type : Takeout
+Time : 2026-03-06 01:43:38
+Batch: 2026-03-06 06:43:38 UTC
+--------------------------------
++  1  Chicken Teriyaki
+--------------------------------
+
